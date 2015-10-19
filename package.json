@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alohaglenn/collection/issues"
   },
-  "homepage": "https://github.com/alohaglenn/collection#readme"
+  "homepage": "https://github.com/alohaglenn/collection#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
