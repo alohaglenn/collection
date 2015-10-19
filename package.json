@@ -1,0 +1,19 @@
+{
+  "name": "collection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alohaglenn/collection.git"
+  },
+  "author": "Glenn Gonda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alohaglenn/collection/issues"
+  },
+  "homepage": "https://github.com/alohaglenn/collection#readme"
+}
