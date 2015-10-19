@@ -11,8 +11,8 @@ var app = angular.module('collection', ['ngRoute', 'ngResource']);
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: '',
-      controller: ''
+      templateUrl: 'components/photoFeed/feed.view.html',
+      controller: 'feedCtrl'
     })
     .otherwise({
       redirectTo: '/'
