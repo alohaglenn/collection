@@ -47,4 +47,10 @@ body {
 
 #icon {
   width:50px;
+  float: left;
+}
+
+#brandname {
+  float: left;
+  padding: 10px 0px 0 10px;
 }
