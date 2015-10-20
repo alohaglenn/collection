@@ -5,3 +5,11 @@
 .navbar-brand {
   color: #ded1c1;
 }
+
+.form-group {
+  padding: 10px;
+}
+
+.barBtn {
+  text-align: center;
+}

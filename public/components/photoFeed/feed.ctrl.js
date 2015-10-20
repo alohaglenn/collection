@@ -6,9 +6,7 @@ angular.module('collection')
 
  feed.getResults(function(data) {
   $scope.photos = data;
-  console.log($scope.photos);
+  console.log('photos: ',$scope.photos);
  });
-
-
 
 }]);
