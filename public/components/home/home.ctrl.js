@@ -1,12 +1,12 @@
 angular.module('collection')
 
-.controller('homeCtrl', ['$scope', 'home', function($scope, home) {
+.controller('homeCtrl', ['$scope', 'homeService', function($scope, homeService) {
 
-  $scope.tag = home.tag;
+  $scope.tag = homeService.tag;
 
   $scope.$watch('tag', function() {
     console.log('$scope.tag', $scope.tag);
-    home.tag = $scope.tag;
+    homeService.tag = $scope.tag;
   });
 
 }]);

@@ -1,5 +1,5 @@
 angular.module('collection')
 
-.service('home', function() {
+.service('homeService', function() {
   this.tag = '';
 });

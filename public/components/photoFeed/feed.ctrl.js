@@ -1,12 +1,12 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', 'feed', 'home', function($scope, feed, home) {
+.controller('feedCtrl', ['$scope', 'feedService', 'homeService', function($scope, feedService, homeService) {
 
- $scope.tag = home.tag;
+ $scope.tag = homeService.tag;
 
  $scope.photos = [];
 
- feed.getResults(function(data) {
+ feedService.getResults(function(data) {
   $scope.photos = data;
   console.log('photos: ',$scope.photos);
  });

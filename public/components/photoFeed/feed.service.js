@@ -1,10 +1,10 @@
 angular.module('collection')
 
-.service('feed', function($resource, APIcred) {
+.service('feedService', function($resource, APIcred, homeService) {
 
   return {
     getResults: function(cbk) {
-      var tagName = 'aloha';
+      var tagName;
       var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
         {
           client_id: APIcred.CLIENT_ID,
@@ -16,7 +16,6 @@ angular.module('collection')
       });
 
       api.get(function(res) {
-        // console.log('res', res);
         cbk(res.data);
       });
     }
