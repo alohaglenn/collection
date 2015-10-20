@@ -6,8 +6,14 @@ body {
   background-color: #125688;
 }
 
-.navbar-brand {
-  color: #ded1c1;
+/*.navbar-brand {
+  color: #6dc993;
+}*/
+
+#brandname {
+  color: #6dc993;
+  float: left;
+  padding: 10px 0px 0 10px;
 }
 
 .form-group {
@@ -48,9 +54,4 @@ body {
 #icon {
   width:50px;
   float: left;
-}
-
-#brandname {
-  float: left;
-  padding: 10px 0px 0 10px;
 }
