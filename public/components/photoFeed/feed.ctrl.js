@@ -1,6 +1,8 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', 'feed', function($scope, feed) {
+.controller('feedCtrl', ['$scope', 'feed', 'home', function($scope, feed, home) {
+
+ $scope.tag = home.tag;
 
  $scope.photos = [];
 
