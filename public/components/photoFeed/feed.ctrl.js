@@ -19,12 +19,13 @@ angular.module('collection')
     });
 
     api.get(function(res) {
-      cbk(res.data);
+      cbk(res);
     });
  };
 
  getResults(function(data) {
-  $scope.photos = data;
+  console.log('data', data);
+  $scope.photos = data.data;
   console.log('photos: ',$scope.photos);
  });
 
