@@ -25,6 +25,7 @@ angular.module('collection')
 
  getResults(function(data) {
   console.log('data', data);
+  console.log('data.pagination', data.pagination.next_url);
   $scope.photos = data.data;
   console.log('photos: ',$scope.photos);
  });
