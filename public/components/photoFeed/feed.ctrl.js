@@ -1,7 +1,14 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', function($scope) {
+.controller('feedCtrl', ['$scope', 'feed', function($scope, feed) {
 
-  console.log('$$$$$$', $scope);
+ $scope.photos = [];
+
+ feed.getResults(function(data) {
+  $scope.photos = data;
+  console.log($scope.photos);
+ });
+
+
 
 }]);
