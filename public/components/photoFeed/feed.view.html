@@ -2,7 +2,7 @@
   <h3 id="results">Results for "{{ tag }}"</h3>
 
   <div class="row gallery">
-    <div class="col-md-3 hvr-float-shadow" ng-repeat="photo in photos">
+    <div class="col-md-3 hvr-float" ng-repeat="photo in photos">
       <a href="{{photo.link}}" target="_blank"><img class="main" ng-src="{{ photo.images.low_resolution.url }}"></a>
       <div class="info">
         <a href="https://instagram.com/{{photo.user.username}}" target="_blank">
@@ -23,3 +23,15 @@
 </div>
 
 
+
+ 
+    <!-- normal -->
+<!--     <div class="ih-item circle effect13 from_left_and_right"><a href="#">
+        <div class="img"><img src="images/assets/7.jpg" alt="img"></div>
+        <div class="info">
+          <div class="info-back">
+            <h3>Heading here</h3>
+            <p>Description goes here</p>
+          </div>
+        </div></a></div> -->
+    <!-- end normal -->
