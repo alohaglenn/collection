@@ -1,5 +1,5 @@
 <div ng-controller="feedCtrl">
-  <h3>Results for "{{ tag }}"</h3>
+  <h3 id="results">Results for "{{ tag }}"</h3>
   <div class="row gallery">
     <div class="col-md-3" ng-repeat="photo in photos">
       <a href="#"><img class="main" ng-src="{{ photo.images.low_resolution.url }}"></a>

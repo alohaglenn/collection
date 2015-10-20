@@ -1,3 +1,7 @@
+body {
+  background-color: #ded1c1;
+}
+
 .navbar {
   background-color: #125688;
 }
@@ -20,12 +24,13 @@
 
 .gallery img.main {
   width: 100%;
+  border: 5px solid white;
 }
 
 .info {
   text-align: center;
-  background-color: #9b6954;
-  color: #ded1c1;
+  background-color: white;
+  color: #125688;
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -34,4 +39,8 @@
 .avatar {
   width: 40px;
   margin-right: 10px;
+}
+
+#results {
+  padding: 10px 0 20px 0;
 }
