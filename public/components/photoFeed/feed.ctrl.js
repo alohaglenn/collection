@@ -18,7 +18,7 @@ angular.module('collection')
       {
       get: {
         method: 'JSONP', 
-        params: { count: 16}
+        params: { count: 20}
       }
     });
 
@@ -43,7 +43,7 @@ angular.module('collection')
 
  $scope.getNextPage = function() {
   console.log('testing123');
- }
+ };
 
 }]);
 
