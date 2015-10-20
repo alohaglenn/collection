@@ -13,8 +13,7 @@ angular.module('collection')
         },
         {
         get: {
-          method: 'JSONP', 
-          params: { q: 'hellothere' }
+          method: 'JSONP'
         }
       });
 
