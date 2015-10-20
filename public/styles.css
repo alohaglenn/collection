@@ -13,3 +13,25 @@
 .barBtn {
   text-align: center;
 }
+
+.gallery {
+  margin-bottom:10px;
+}
+
+.gallery img.main {
+  width: 100%;
+}
+
+.info {
+  text-align: center;
+  background-color: #9b6954;
+  color: #ded1c1;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.avatar {
+  width: 40px;
+  margin-right: 10px;
+}

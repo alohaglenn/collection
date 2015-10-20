@@ -8,19 +8,19 @@ angular.module('collection')
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
-      var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
-        {
-          client_id: APIcred.CLIENT_ID,
-        },
-        {
-        get: {
-          method: 'JSONP'
-        }
-      });
+    var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
+      {
+        client_id: APIcred.CLIENT_ID,
+      },
+      {
+      get: {
+        method: 'JSONP'
+      }
+    });
 
-      api.get(function(res) {
-        cbk(res.data);
-      });
+    api.get(function(res) {
+      cbk(res.data);
+    });
  };
 
  getResults(function(data) {

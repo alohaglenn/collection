@@ -5,7 +5,6 @@ angular.module('collection')
   $scope.tag = homeService.tag;
 
   $scope.$watch('tag', function() {
-    console.log('$scope.tag', $scope.tag);
     homeService.tag = $scope.tag;
   });
 
