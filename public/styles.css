@@ -6,10 +6,6 @@ body {
   background-color: #125688;
 }
 
-/*.navbar-brand {
-  color: #6dc993;
-}*/
-
 #brandname {
   color: #6dc993;
   float: left;
@@ -20,8 +16,8 @@ body {
   padding: 10px;
 }
 
-.barBtn {
-  text-align: center;
+#searchbar {
+  float: left;
 }
 
 .gallery {
