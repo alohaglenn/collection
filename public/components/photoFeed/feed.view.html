@@ -8,6 +8,14 @@
   </ul>
 </nav>
 
+<pagination 
+  ng-model="currentPage"
+  total-items="todos.length"
+  max-size="maxSize"  
+  boundary-links="true">
+</pagination>
+
+
   <div class="row gallery">
     <div class="col-md-3" ng-repeat="photo in photos">
       <a href="{{photo.link}}" target="_blank"><img class="main" ng-src="{{ photo.images.low_resolution.url }}"></a>
@@ -19,12 +27,14 @@
       </div>
     </div>
   </div>
+
+  <nav>
+    <ul class="pager">
+      <li><a href="#">Previous</a></li>
+      <li><a href="{{ data.pagination.next_url }}">Next</a></li>
+    </ul>
+  </nav>
+  
 </div>
 
-<nav>
-  <ul class="pager">
-    <li><a href="#">Previous</a></li>
-    <li><a href="{{ data.pagination.next_url }}">Next</a></li>
-  </ul>
-</nav>
 

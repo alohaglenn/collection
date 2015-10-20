@@ -6,17 +6,19 @@ angular.module('collection')
 
  $scope.photos = [];
 
- $scope.nextUrl = '';
+ $scope.nextMaxID;
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
+    var nextMaxID = $scope.nextMaxID;
     var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
       {
         client_id: APIcred.CLIENT_ID,
       },
       {
       get: {
-        method: 'JSONP'
+        method: 'JSONP', 
+        params: { count: 16}
       }
     });
 
@@ -26,12 +28,28 @@ angular.module('collection')
  };
 
  getResults(function(data) {
+
+  $scope.nextUrl = data.pagination.next_url;
+  $scope.nextMaxID = '&max_tag_id=' + data.pagination.next_max_id;
+  $scope.photos = data.data;
+
   console.log('data', data);
   console.log('data.pagination', data.pagination.next_url);
-  $scope.nextUrl = data.pagination.next_url;
-  $scope.photos = data.data;
-  console.log('nextUrl', $scope.nextUrl)
+  console.log('nextMaxID:', $scope.nextMaxID);
+  console.log('nextUrl', $scope.nextUrl);
   console.log('photos: ',$scope.photos);
+
  });
 
+ $scope.getNextPage = function() {
+  console.log('testing123');
+ }
+
 }]);
+
+
+
+
+
+
+
