@@ -7,7 +7,8 @@ angular.module('collection')
  $scope.photos = [];
 
  var getResults = function(cbk) {
-      var api = $resource('https://api.instagram.com/v1/tags/' + $scope.tag + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
+    var tagName = $scope.tag;
+      var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
         {
           client_id: APIcred.CLIENT_ID,
         },
