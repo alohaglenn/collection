@@ -6,6 +6,8 @@ angular.module('collection')
 
  $scope.photos = [];
 
+ $scope.next = '';
+
  var getResults = function(cbk) {
     var tagName = $scope.tag;
     var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
@@ -26,6 +28,7 @@ angular.module('collection')
  getResults(function(data) {
   console.log('data', data);
   console.log('data.pagination', data.pagination.next_url);
+  $scope.next = data.pagination.next_url;
   $scope.photos = data.data;
   console.log('photos: ',$scope.photos);
  });
