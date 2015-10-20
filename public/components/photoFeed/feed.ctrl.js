@@ -6,7 +6,7 @@ angular.module('collection')
 
  $scope.photos = [];
 
- $scope.next = '';
+ $scope.nextUrl = '';
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
@@ -28,8 +28,9 @@ angular.module('collection')
  getResults(function(data) {
   console.log('data', data);
   console.log('data.pagination', data.pagination.next_url);
-  $scope.next = data.pagination.next_url;
+  $scope.nextUrl = data.pagination.next_url;
   $scope.photos = data.data;
+  console.log('nextUrl', $scope.nextUrl)
   console.log('photos: ',$scope.photos);
  });
 
