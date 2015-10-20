@@ -1,5 +1,5 @@
 angular.module('collection')
 
 .service('home', function() {
-  return {};
+  this.tag = "#aloha";
 });
