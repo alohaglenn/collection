@@ -1,12 +1,21 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', '$resource', 'homeService', function($scope, $resource, homeService) {
+.controller('feedCtrl', ['$scope', '$http, ''$resource', 'homeService', function($scope, $http, $resource, homeService) {
 
  $scope.tag = homeService.tag;
 
  $scope.photos = [];
 
+ $scope.key = '';
+
  // $scope.nextMaxID;
+
+ //set API key
+ $http.get('./config.json')
+  .success(function(data) {
+    $scope.key = data.CLIENT_ID;
+    console.log('success!');
+  });
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
@@ -16,7 +25,7 @@ angular.module('collection')
       //   client_id: APIcred.CLIENT_ID, // running locally
       // },
       {
-        client_id: process.env.CLIENT_ID, // heroku
+        client_id: $scope.key, // heroku
       },
       {
       get: {
