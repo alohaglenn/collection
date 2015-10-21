@@ -32,6 +32,6 @@ Pagination: I accessed the pagination.next_url property and originally added pag
 
 Favorites: When a user 'favorites' a photo, the photo and additional info (username, timestamp, etc) will be stored in PostgreSQL. The user then can click on a 'favorites' tab to view that collection. 
 
-Print: A user can send a photo from their 'favorites' to get printed and mailed to them (via a form submission a third-party printer).
+Print: A user can send a photo from their 'favorites' to get printed and mailed to them (via a form submission to a third-party printer).
 
-Google Maps: A user can retrieve search results based on location. 
+Google Maps: A user can retrieve search results based on specified location. 
