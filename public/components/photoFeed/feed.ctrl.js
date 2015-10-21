@@ -33,6 +33,13 @@ angular.module('collection')
   $scope.nextMaxID = '&max_tag_id=' + data.pagination.next_max_id;
   $scope.photos = data.data;
 
+  for(var i = 0; i < $scope.photos.length; i++) {
+    if($scope.photos[i].type === 'video') { 
+      console.log('$$$$$$$$$$$$$$$$: ',$scope.photos[i]);
+      $scope.photos[i].images.low_resolution.url = $scope.photos[i].videos.low_bandwidth.url;
+    }
+  }
+
   console.log('data', data);
   console.log('data.pagination', data.pagination.next_url);
   console.log('nextMaxID:', $scope.nextMaxID);
@@ -41,9 +48,9 @@ angular.module('collection')
 
  });
 
- $scope.getNextPage = function() {
-  console.log('testing123');
- };
+ // $scope.getNextPage = function() {
+ //  console.log('testing123');
+ // };
 
 }]);
 
