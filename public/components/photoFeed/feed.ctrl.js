@@ -1,6 +1,6 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', '$resource', 'APIcred', 'homeService', function($scope, $resource, APIcred, homeService) {
+.controller('feedCtrl', ['$scope', '$resource', 'homeService', function($scope, $resource, homeService) {
 
  $scope.tag = homeService.tag;
 
