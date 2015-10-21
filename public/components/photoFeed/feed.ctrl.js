@@ -16,7 +16,7 @@ angular.module('collection')
       //   client_id: APIcred.CLIENT_ID, // running locally
       // },
       {
-        client_id: ENV['CLIENT_ID'], // heroku
+        client_id: process.env.CLIENT_ID, // heroku
       },
       {
       get: {
