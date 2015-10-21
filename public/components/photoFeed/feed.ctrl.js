@@ -8,15 +8,6 @@ angular.module('collection')
 
  $scope.key = '';
 
- // $scope.nextMaxID;
-
- //set API key
- $http.get('/config.json')
-  .success(function(data) {
-    $scope.key = data.CLIENT_ID;
-    console.log('success!');
-  });
-
  var getResults = function(cbk) {
     var tagName = $scope.tag;
     var nextMaxID = $scope.nextMaxID;
@@ -25,7 +16,7 @@ angular.module('collection')
       //   client_id: APIcred.CLIENT_ID, // running locally
       // },
       {
-        client_id: $scope.key, // heroku
+        client_id: process.env.CLIENT_ID, // heroku
       },
       {
       get: {
