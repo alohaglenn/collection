@@ -6,7 +6,7 @@ angular.module('collection')
 
  $scope.photos = [];
 
- $scope.nextMaxID;
+ // $scope.nextMaxID;
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
