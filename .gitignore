@@ -1,6 +1,5 @@
 node_modules
 npm-debug.log
 APIcred.js
-config.json
 Procfile
 .env
