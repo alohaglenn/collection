@@ -1,2 +1,2 @@
-# collection
-Instagram Collection
+# PhotoFeed
+Search Instagram using tags
