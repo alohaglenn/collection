@@ -6,6 +6,11 @@ body {
   background-color: #125688;
 }
 
+#icon {
+  width:50px;
+  float: left;
+}
+
 #brandname {
   color: #6dc993;
   float: left;
@@ -13,11 +18,11 @@ body {
 }
 
 .form-group {
-  padding: 10px;
+  margin-top:320px;
 }
 
-#searchbar {
-  float: left;
+#searchBtn {
+  text-align: center;
 }
 
 .gallery {
@@ -47,7 +52,10 @@ body {
   padding: 10px 0 20px 0;
 }
 
-#icon {
-  width:50px;
-  float: left;
+#bgimg {
+  margin: 15px auto;
+  height: 418px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+

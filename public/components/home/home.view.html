@@ -1,21 +1,23 @@
-
-
-<div class="searchRow">
-  <div class="col-md-4">
-    <div class="form-group">
-      <input type="text" ng-model="tag" placeholder="Search by #hashtag" class="form-control" />
+<div ng-controller="homeCtrl" id="bgimg" style="background-image: url({{ bgimg }})" >
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <input type="text" ng-model="tag" placeholder="Search by #hashtag" class="form-control" />
+      </div>
     </div>
   </div>
+        <div id="searchBtn">
+           <a href="#/results" class="btn btn-primary">Search</a>
+        </div>
+</div>
 
-  <div class="dateSelect col-md-3">
+
+
+
+
+  <!-- <div class="dateSelect col-md-3">
       <input id="startDate" type="date" ng-model="dateStart" class="datepicker form-control" /> 
   </div>
   <div class="dateSelect col-md-3">
       <input id="startDate" type="date" ng-model="dateEnd" class="datepicker form-control" />
-  </div>
-
-  <div>
-     <a href="#/results" id="searchBtn" class="btn btn-primary">Search</a>
-  </div>
-
-</div>
+  </div> -->
