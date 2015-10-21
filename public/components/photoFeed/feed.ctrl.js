@@ -1,6 +1,6 @@
 angular.module('collection')
 
-.controller('feedCtrl', ['$scope', '$http', '$resource', 'homeService', function($scope, $http, $resource, homeService) {
+.controller('feedCtrl', ['$scope', '$http', '$resource', 'APIcred', 'homeService', function($scope, $http, $resource, APIcred, homeService) {
 
  $scope.tag = homeService.tag;
 
@@ -12,11 +12,8 @@ angular.module('collection')
     var tagName = $scope.tag;
     var nextMaxID = $scope.nextMaxID;
     var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
-      // {
-      //   client_id: APIcred.CLIENT_ID, // running locally
-      // },
       {
-        client_id: process.env.CLIENT_ID, // heroku
+        client_id: APIcred.CLIENT_ID,
       },
       {
       get: {
