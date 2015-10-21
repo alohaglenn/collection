@@ -2,23 +2,23 @@ angular.module('collection')
 
 .controller('feedCtrl', ['$scope', '$http', '$resource', 'APIcred', 'homeService', function($scope, $http, $resource, APIcred, homeService) {
 
- $scope.tag = homeService.tag;
+ $scope.tag = homeService.tag; //binds data entered in search bar on home page
 
- $scope.photos = [];
+ $scope.photos = []; //array of results from API call
 
- $scope.key = '';
+ // $scope.key = '';
 
  var getResults = function(cbk) {
     var tagName = $scope.tag;
-    var nextMaxID = $scope.nextMaxID;
+    // var nextMaxID = $scope.nextMaxID; //need for pagination later 
     var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
       {
-        client_id: APIcred.CLIENT_ID,
+        client_id: APIcred.CLIENT_ID, //grabs CLIENT_ID from APIcred.js
       },
       {
       get: {
-        method: 'JSONP', 
-        params: { count: 20}
+        method: 'JSONP', //JSONP needed to handle cross-domain AJAX
+        params: { count: 20} //count displays the desired number of photos
       }
     });
 
@@ -27,8 +27,8 @@ angular.module('collection')
     });
  };
 
- getResults(function(data) {
-  $scope.photos = data.data;
+ getResults(function(data) { //call getResults to get the data
+  $scope.photos = data.data; //data returns IG object
 
   // $scope.nextUrl = data.pagination.next_url;
   // $scope.nextMaxID = '&max_tag_id=' + data.pagination.next_max_id;
