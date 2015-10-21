@@ -40,10 +40,10 @@ angular.module('collection')
  };
 
  getResults(function(data) {
-
-  $scope.nextUrl = data.pagination.next_url;
-  $scope.nextMaxID = '&max_tag_id=' + data.pagination.next_max_id;
   $scope.photos = data.data;
+
+  // $scope.nextUrl = data.pagination.next_url;
+  // $scope.nextMaxID = '&max_tag_id=' + data.pagination.next_max_id;
 
   // for(var i = 0; i < $scope.photos.length; i++) {
   //   if($scope.photos[i].type === 'video') { 
