@@ -11,7 +11,7 @@ angular.module('collection')
  // $scope.nextMaxID;
 
  //set API key
- $http.get('config.json')
+ $http.get('/config.json')
   .success(function(data) {
     $scope.key = data.CLIENT_ID;
     console.log('success!');
