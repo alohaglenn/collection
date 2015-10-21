@@ -11,7 +11,7 @@ angular.module('collection')
  // $scope.nextMaxID;
 
  //set API key
- $http.get('./config.json')
+ $http.get('config.json')
   .success(function(data) {
     $scope.key = data.CLIENT_ID;
     console.log('success!');
@@ -52,11 +52,11 @@ angular.module('collection')
   //   }
   // }
 
-  console.log('data', data);
-  console.log('data.pagination', data.pagination.next_url);
-  console.log('nextMaxID:', $scope.nextMaxID);
-  console.log('nextUrl', $scope.nextUrl);
-  console.log('photos: ',$scope.photos);
+  // console.log('data', data);
+  // console.log('data.pagination', data.pagination.next_url);
+  // console.log('nextMaxID:', $scope.nextMaxID);
+  // console.log('nextUrl', $scope.nextUrl);
+  // console.log('photos: ',$scope.photos);
 
  });
 
