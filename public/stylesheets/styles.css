@@ -18,11 +18,11 @@ body {
 }
 
 .form-group {
-  margin-top:320px;
+  position: relative;
 }
 
 #searchBtn {
-  text-align: center;
+  margin: 0 auto;
 }
 
 .gallery {
