@@ -1,6 +1,6 @@
 angular.module('collection')
 
-.controller('homeCtrl', ['$scope', 'homeService', function($scope, homeService) {
+.controller('homeCtrl', ['$scope', '$location', 'homeService', function($scope, $location, homeService) {
 
   $scope.bgimg = './assets/ig.jpg'; //setting background image for home view
 
@@ -9,5 +9,9 @@ angular.module('collection')
   $scope.$watch('tag', function() { //watches for changes on user input in search bar
     homeService.tag = $scope.tag;
   });
+
+  $scope.submit = function() {
+    $location.path('/results');
+  };
 
 }]);
