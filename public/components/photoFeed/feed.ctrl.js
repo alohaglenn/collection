@@ -13,7 +13,7 @@ angular.module('collection')
     // var nextMaxID = $scope.nextMaxID; //need for pagination later 
     var api = $resource('https://api.instagram.com/v1/tags/' + tagName + '/media/recent?client_id=client_id&callback=JSON_CALLBACK', 
       {
-        client_id: '', //grabs CLIENT_ID from APIcred.js
+        client_id: APIcred.js, //grabs CLIENT_ID from APIcred.js
       },
       {
       get: {
