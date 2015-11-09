@@ -1,3 +1,3 @@
-# PhotoFeed: Search Instagram Tags
+# PhotoFeed
 
-![PhotoFeed](http://i.imgur.com/R9UH8zn.gif?1)
+Instagram Search Tool
