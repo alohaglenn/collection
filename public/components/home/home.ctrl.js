@@ -6,6 +6,8 @@ angular.module('collection')
 
   $scope.tag = homeService.tag; //sets the tag for API call
 
+  $scope.characters = 1;
+
   $scope.$watch('tag', function() { //watches for changes on user input in search bar
     homeService.tag = $scope.tag;
   });
