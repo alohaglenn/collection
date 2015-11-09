@@ -19,11 +19,14 @@ body {
 
 .form-group {
   position: relative;
+  top: 450px;
+  text-align: center;
 }
 
 #searchBtn {
-  margin: 0 auto;
+  margin-top: 10px;
 }
+
 
 .gallery {
   margin-bottom:10px;
